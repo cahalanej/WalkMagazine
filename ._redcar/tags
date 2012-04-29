@@ -1,6 +1,5 @@
-1335672520
-AddIndexToUsersEmail	C:/Users/Jen/WalkMagazine/db/migrate/20120429033028_add_index_to_users_email.rb	class AddIndexToUsersEmail 
-AddPasswordDigestToUsers	C:/Users/Jen/WalkMagazine/db/migrate/20120429033937_add_password_digest_to_users.rb	class AddPasswordDigestToUsers 
+1335726868
+AddDeviseToUsers	C:/Users/Jen/WalkMagazine/db/migrate/20120429171718_add_devise_to_users.rb	class AddDeviseToUsers 
 Application	C:/Users/Jen/WalkMagazine/config/application.rb	  class Application 
 ApplicationController	C:/Users/Jen/WalkMagazine/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	C:/Users/Jen/WalkMagazine/app/helpers/application_helper.rb	module ApplicationHelper
@@ -41,15 +40,12 @@ UsersController	C:/Users/Jen/WalkMagazine/app/controllers/users_controller.rb	cl
 UsersControllerTest	C:/Users/Jen/WalkMagazine/test/functional/users_controller_test.rb	class UsersControllerTest 
 UsersHelper	C:/Users/Jen/WalkMagazine/app/helpers/users_helper.rb	module UsersHelper
 UsersHelperTest	C:/Users/Jen/WalkMagazine/test/unit/helpers/users_helper_test.rb	class UsersHelperTest 
-VALID_EMAIL_REGEX	C:/Users/Jen/WalkMagazine/app/models/user.rb	  VALID_EMAIL_REGEX =
 Walk	C:/Users/Jen/WalkMagazine/config/application.rb	module Walk
-change	C:/Users/Jen/WalkMagazine/db/migrate/20120429033937_add_password_digest_to_users.rb	  def change
-change	C:/Users/Jen/WalkMagazine/db/migrate/20120429033028_add_index_to_users_email.rb	  def change
 change	C:/Users/Jen/WalkMagazine/db/migrate/20120429032924_create_comments.rb	  def change
 change	C:/Users/Jen/WalkMagazine/db/migrate/20120429032703_create_posts.rb	  def change
-change	C:/Users/Jen/WalkMagazine/db/migrate/20120429032120_create_users.rb	  def change
 change	C:/Users/Jen/WalkMagazine/db/migrate/20120429032043_create_subcategories.rb	  def change
 change	C:/Users/Jen/WalkMagazine/db/migrate/20120429031958_create_categories.rb	  def change
+change	C:/Users/Jen/WalkMagazine/db/migrate/20120429032120_create_users.rb	  def change
 create	C:/Users/Jen/WalkMagazine/app/controllers/users_controller.rb	  def create
 create	C:/Users/Jen/WalkMagazine/app/controllers/subcategories_controller.rb	  def create
 create	C:/Users/Jen/WalkMagazine/app/controllers/posts_controller.rb	  def create
@@ -60,6 +56,7 @@ destroy	C:/Users/Jen/WalkMagazine/app/controllers/subcategories_controller.rb	  
 destroy	C:/Users/Jen/WalkMagazine/app/controllers/posts_controller.rb	  def destroy
 destroy	C:/Users/Jen/WalkMagazine/app/controllers/comments_controller.rb	  def destroy
 destroy	C:/Users/Jen/WalkMagazine/app/controllers/categories_controller.rb	  def destroy
+down	C:/Users/Jen/WalkMagazine/db/migrate/20120429171718_add_devise_to_users.rb	  def self.down
 edit	C:/Users/Jen/WalkMagazine/app/controllers/users_controller.rb	  def edit
 edit	C:/Users/Jen/WalkMagazine/app/controllers/subcategories_controller.rb	  def edit
 edit	C:/Users/Jen/WalkMagazine/app/controllers/posts_controller.rb	  def edit
@@ -81,6 +78,7 @@ show	C:/Users/Jen/WalkMagazine/app/controllers/posts_controller.rb	  def show
 show	C:/Users/Jen/WalkMagazine/app/controllers/comments_controller.rb	  def show
 show	C:/Users/Jen/WalkMagazine/app/controllers/categories_controller.rb	  def show
 test_homepage	C:/Users/Jen/WalkMagazine/test/performance/browsing_test.rb	  def test_homepage
+up	C:/Users/Jen/WalkMagazine/db/migrate/20120429171718_add_devise_to_users.rb	  def self.up
 update	C:/Users/Jen/WalkMagazine/app/controllers/users_controller.rb	  def update
 update	C:/Users/Jen/WalkMagazine/app/controllers/subcategories_controller.rb	  def update
 update	C:/Users/Jen/WalkMagazine/app/controllers/posts_controller.rb	  def update
