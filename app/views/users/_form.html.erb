@@ -12,9 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.text_field :name, :placeholder=>"name" %>
   </div>
+  <div class="field">
+    <%= f.text_field :email, :placeholder=>"email" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password, :placeholder=>"password" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password_confirmation, :placeholder=>"confirm password" %>
+  </div>
+  <div class="field">
+    <%= f.text_field :major, :placeholder=>"major" %>
+  </div>
+  <div class="field">
+    <%= f.label :Year_of_Graduation %><br />
+    <%= f.number_field :yog%>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
