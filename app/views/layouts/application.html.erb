@@ -7,178 +7,196 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container-fluid"> 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div class="container-fluid">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-  <div id="navbar">
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand">
-            The Walk Magazine
-          </a>
+    <div id="navbar">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="brand">
+              The Walk Magazine
+            </a>
+            <div name="search">
+              <div class="row">
+                <div class="span5 offset5">
+                  <%= form_tag search_path, :method => 'get' do%>
+                  <p>
+                    <%= text_field_tag :search, params[:search], :placeholder =>"search posts"%>
+                    <%= submit_tag "Search", :name => nil %>
+                  </p>
+                  <%end%>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class ="btn-toolbar">
-      <div class="btn-group">
-        <ul>
-          <li>
-            <div id="btn-toolbar">
-              <div class="btn-group">
-                <%= link_to "Home", users_path%>
+      <div class ="btn-toolbar">
+        <div class="btn-group">
+          <ul>
+            <li>
+              <div id="btn-toolbar">
+                <div class="btn-group">
+                  <%= link_to "Home", users_path%>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div id="btn-toolbar">
+                <div class="btn-group">
+
+                  <%=link_to "Fashion", href= posts_url %>
+
+                  <ul>
+                    <li>
+                      <%=link_to "Fashion Inspiration", subcategory_path(:id =>1) %>
+                    </li>
+                    <li>
+                      <%=link_to "Trends to Try", subcategory_path(:id =>2) %>
+                    </li>
+                    <li>
+                      <%=link_to "Style Crush", subcategory_path(:id =>3) %>
+                    </li>
+                    <li>
+                      <%=link_to "On Screen Style", subcategory_path(:id =>4)%>
+                    </li>
+                    <li>
+                      <%=link_to "Men's Fashion", subcategory_path(:id =>5) %>
+                    </li>
+                  </ul>
+                </button>
               </div>
             </div>
           </li>
           <li>
             <div id="btn-toolbar">
               <div class="btn-group">
-
-                <%=link_to "Fashion", href= posts_url %>
-
+                <%=link_to "Shopping", href= posts_url %>
                 <ul>
                   <li>
-                    <%=link_to "Fashion Inspiration", subcategory_path(:id =>1) %>
+                    <%=link_to "Item of the Day", subcategory_path(:id =>6) %>
                   </li>
                   <li>
-                    <%=link_to "Trends to Try", subcategory_path(:id =>2) %>
+                    <%=link_to "Chic for Cheap", subcategory_path(:id =>7)%>
                   </li>
                   <li>
-                    <%=link_to "Style Crush", subcategory_path(:id =>3) %>
+                    <%=link_to "Outrageous Online",subcategory_path(:id =>8)%>
                   </li>
                   <li>
-                    <%=link_to "On Screen Style", subcategory_path(:id =>4)%>
-                  </li>
-                  <li>
-                    <%=link_to "Men's Fashion", subcategory_path(:id =>5) %>
+                    <%=link_to "What's in my Bag", subcategory_path(:id =>9)%>
                   </li>
                 </ul>
-              </button>
+              </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <div id="btn-toolbar">
-            <div class="btn-group">
-              <%=link_to "Shopping", href= posts_url %>
-              <ul>
-                <li>
-                  <%=link_to "Item of the Day", subcategory_path(:id =>6) %>
-                </li>
-                <li>
-                  <%=link_to "Chic for Cheap", subcategory_path(:id =>7)%>
-                </li>
-                <li>
-                  <%=link_to "Outrageous Online",subcategory_path(:id =>8)%>
-                </li>
-                <li>
-                  <%=link_to "What's in my Bag", subcategory_path(:id =>9)%>
-                </li>
-              </ul>
+          </li>
+          <li>
+            <div id="btn-toolbar">
+              <div class="btn-group">
+                <%=link_to "Health & Beauty", subcategory_path(:id =>10)%>
+                <ul>
+                  <li>
+                    <%=link_to "Beauty Tips", subcategory_path(:id =>11) %>
+                  </li>
+                  <li>
+                    <%=link_to "Health Tips", subcategory_path(:id =>12)%>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <div id="btn-toolbar">
-            <div class="btn-group">
-              <%=link_to "Health & Beauty", subcategory_path(:id =>10)%>
-              <ul>
-                <li>
-                  <%=link_to "Beauty Tips", subcategory_path(:id =>11) %>
-                </li>
-                <li>
-                  <%=link_to "Health Tips", subcategory_path(:id =>12)%>
-                </li>
-              </ul>
+          </li>
+          <li>
+            <div id="btn-toolbar">
+              <div class="btn-group">
+                <%=link_to "Culture", href= posts_url %>
+                <ul>
+                  <li>
+                    <%=link_to "In the City", subcategory_path(:id =>13)%>
+                  </li>
+                  <li>
+                    <%=link_to "Penn",  subcategory_path(:id =>14) %>
+                  </li>
+                  <li>
+                    <%=link_to "Food", subcategory_path(:id =>15) %>
+                  </li>
+                  <li>
+                    <%=link_to "Music", subcategory_path(:id =>16) %>
+                  </li>
+                  <li>
+                    <%=link_to "Walk Int'l", subcategory_path(:id =>17) %>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <div id="btn-toolbar">
-            <div class="btn-group">
-              <%=link_to "Culture", href= posts_url %>
-              <ul>
-                <li>
-                  <%=link_to "In the City", subcategory_path(:id =>13)%>
-                </li>
-                <li>
-                  <%=link_to "Penn",  subcategory_path(:id =>14) %>
-                </li>
-                <li>
-                  <%=link_to "Food", subcategory_path(:id =>15) %>
-                </li>
-                <li>
-                  <%=link_to "Music", subcategory_path(:id =>16) %>
-                </li>
-                <li>
-                  <%=link_to "Walk Int'l", subcategory_path(:id =>17) %>
-                </li>
-              </ul>
+          </li>
+          <li>
+            <div id="btn-toolbar">
+              <div class="btn-group">
+                <%=link_to "Seen on the Walk", href= "http://thewalkblog.tumblr.com/"%>
+              </div>
             </div>
-          </div>
-        </li>
-        <li>
-          <div id="btn-toolbar">
-            <div class="btn-group">
-              <%=link_to "Seen on the Walk", href= "http://thewalkblog.tumblr.com/"%>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div id="btn-toolbar">
-            <div class="btn-group">
-              <%=link_to "In Print", subcategory_path(:id =>18) %>
-              <ul>
-                <li>
-                  <%=link_to "Summer2012", subcategory_path(:id =>19)%>
-                </li>
-                <li>
-                  <%=link_to "Winter2012", subcategory_path(:id =>20) %>
-                </li>
-                <li>
-                  <%=link_to "Spring/Summer2011", subcategory_path(:id =>21) %>
-                </li>
-                <li>
-                  <%=link_to "Winter2011", subcategory_path(:id =>22) %>
-                </li>
-                <li>
-                  <%=link_to "Fall2010",subcategory_path(:id =>23) %>
-                </li>
-              </ul>
+          </li>
+          <li>
+            <div id="btn-toolbar">
+              <div class="btn-group">
+                <%=link_to "In Print", subcategory_path(:id =>18) %>
+                <ul>
+                  <li>
+                    <%=link_to "Summer2012", subcategory_path(:id =>19)%>
+                  </li>
+                  <li>
+                    <%=link_to "Winter2012", subcategory_path(:id =>20) %>
+                  </li>
+                  <li>
+                    <%=link_to "Spring/Summer2011", subcategory_path(:id =>21) %>
+                  </li>
+                  <li>
+                    <%=link_to "Winter2011", subcategory_path(:id =>22) %>
+                  </li>
+                  <li>
+                    <%=link_to "Fall2010",subcategory_path(:id =>23) %>
+                  </li>
+                </ul>
 
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand">
+          a
+        </a>
+      </div>
     </div>
   </div>
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand">
-        a
-      </a>
+
+  <div id ="signin">
+    <div class="row">
+      <div class ="span1 offset9">
+      <% if user_signed_in?%>
+      <%= button_to 'Signout', destroy_user_session_path, method: :delete %>
+        
+        <%else%>
+        <%= button_to 'Sign in', user_session_path %>
+        <%end%>
+      </div>
+      <%if user_signed_in?%>
+      <div class ="span1">
+        <%= button_to 'Change User Info', edit_user_path(current_user), method: :get %>
+      </div>
+      <div class ="span1 offset1">
+        <%= button_to 'New Post', new_post_path, method: :get %>
+      </div>
+      <%end%>
     </div>
   </div>
-</div>
-<div id ="signin">
-<div class="row">
-  <div class ="span1 offset9">
-     <%= button_to 'Sign in', user_session_path %>
+  <div id ="yield">
+    <%= yield %>
   </div>
-    <div class ="span1">
-  <%= button_to 'Signout', destroy_user_session_path, method: :delete %>
-</div>
-<%if user_signed_in?%>
-<div class ="span1">
-  <%= button_to 'New Post', new_post_path, method: :get %>
-</div>
-<%end%>
-</div>
-</div>
-<div id ="yield">
-  <%= yield %>
-</div>
 </div>
 </body>
 </html>

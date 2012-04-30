@@ -1,34 +1,30 @@
 <!DOCTYPE "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Subcategory</title>
-<p id="notice"><%= notice %></p>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Subcategory</title>
+  <p id="notice"><%= notice %></p>
 </head>
 
 <body>
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
 
-<p>
-  <b>Content:</b>
-  <%= @post.post %>
-</p>
-
-<p>
-  <b>Subcategory:</b>
-  <%= @post.subcategory %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @post.user %>
-</p>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <div class="row">
+    <div class="span6 offset5">
+      <% @post.each do |post| %>
+      <tr>
+        <div id="title"> <h3><%=link_to post.title, post_path(1)%></h3></div>
+        <div id="author"> <h5><%=link_to post.user.name, user_path(post.user)%></h5></div>
+        <div id="content"> <%=post.post %><div>
+          <br/>
+          <div class="btn btn-small btn-info"> <%=link_to "Show More", user_path(post.user)%></div>
+          <% if current_user == post.user%>
+          <div class="btn btn-small btn-info"> <%= link_to 'Edit', edit_post_path(post) %></div>
+          <div class="btn btn-small btn-info"><td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td></div>
+          <%end%>
+        </tr>
+        <%end%>
+      </table>
+    </div>
+  </div>
 </body>
 </html>

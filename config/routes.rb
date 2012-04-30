@@ -10,6 +10,8 @@ Walk::Application.routes.draw do
   resources :subcategories
 
   resources :categories
+  
+    match '/posts/search' => 'posts#search', :as => "search"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
