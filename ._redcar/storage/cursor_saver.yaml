@@ -12,4 +12,10 @@ cursor_positions:
   - :path: app/views/layouts/application.html.erb
     :cursor_offset: 1101
     :timestamp: 2012-04-30 02:26:41.466000 -04:00
+  - :path: config/environments/development.rb
+    :cursor_offset: 1365
+    :timestamp: 2012-04-29 22:04:10.590000 -04:00
+  - :path: app/views/devise/mailer/confirmation_instructions.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-04-30 11:14:24.574000 -04:00
 files_to_retain: 0

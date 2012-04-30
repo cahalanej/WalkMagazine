@@ -24,7 +24,35 @@
         </tr>
         <%end%>
       </table>
-    </div>
+      <br/>
+      <br/>
+      <%= form_for(@comment) do |f| %>
+      <%= f.hidden_field :post_id%>
+      <div id="posttitle">
+
+        <div class="field">
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :content %>
+        <%= f.text_area :content%>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+      <% end %>
+      <br/>
+      <br/>
+      <table>
+        <% @post.comments.each do |c| %>
+        <h3><%= c.title %></h3>
+        <div><%= c.content %></div>
+      </br>
+      <% end %>
+    </table>
   </div>
+</div>
 </body>
 </html>

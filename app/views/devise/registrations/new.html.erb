@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="span6 offset5">
+<h2>Sign up</h2>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="field">
+    <%= f.text_field :name, :placeholder=>"name" %>
+  </div>
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.label :password %><br />
+  <%= f.password_field :password %></div>
+
+  <div><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></div>
+  <div class="field">
+    <%= f.text_field :major, :placeholder=>"major" %>
+  </div>
+  <div class="field">
+    <%= f.label :Year_of_Graduation %><br />
+    <%= f.number_field :yog%>
+  </div>
+
+  <div><%= f.submit "Sign up" %></div>
+<% end %>
+
+<%= render "links" %>
+</div>
+</div>
