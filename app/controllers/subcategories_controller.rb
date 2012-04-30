@@ -14,11 +14,8 @@ class SubcategoriesController < ApplicationController
   # GET /subcategories/1.json
   def show
     @subcategory = Subcategory.find(params[:id])
+    @posts = @subcategory.posts
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @subcategory }
-    end
   end
 
   # GET /subcategories/new

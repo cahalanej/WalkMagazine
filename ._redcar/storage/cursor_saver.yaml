@@ -3,4 +3,13 @@ cursor_positions:
   - :path: db/development.sqlite3
     :cursor_offset: 16433
     :timestamp: 2012-04-28 23:55:54.381000 -04:00
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 434
+    :timestamp: 2012-04-29 16:18:54.257000 -04:00
+  - :path: db/seeds.rb
+    :cursor_offset: 991
+    :timestamp: 2012-04-29 18:18:23.838000 -04:00
+  - :path: app/controllers/registrations_controller.rb
+    :cursor_offset: 0
+    :timestamp: 2012-04-29 21:30:59.149000 -04:00
 files_to_retain: 0

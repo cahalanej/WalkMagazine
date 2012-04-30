@@ -24,6 +24,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
+    @user = current_user
     @post = Post.new
 
     respond_to do |format|

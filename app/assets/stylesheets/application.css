@@ -11,3 +11,47 @@
  *= require_self
  *= require_tree .
 */
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: .3em;
+}
+/* Stack LI elements horizontally instead of the default vertical orientation */
+#navbar li {
+  float: left;
+  margin-right: 5px;
+}
+/* Turns the links into larger clickable boxes */
+#navbar li a {
+  display: block;
+  background-color: #f9f9f9;
+  border: 1px solid #f9f9f9;
+  padding: .5em;
+}
+/* Pseudo selector used for a usability aid, so you know when you can click */
+#navbar li a:hover {
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+}
+/* Hides nested hierarchy links by default */
+#navbar li ul {
+  display: none;
+  position: absolute;
+  padding: 0;
+}
+/* Shows nested hierarchy links when we mouseover the parent */
+#navbar li:hover ul {
+  display: block; 
+}
+/* Overrides the style on line 23 for nested link collections */
+#navbar li li {
+  float: none;
+  border-bottom: 1px solid #ccc; /* border-top causes IE bug */
+}
+/* Different styling for nested hierarchy links. */
+#navbar li li a {
+  border: 0;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}

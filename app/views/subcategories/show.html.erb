@@ -1,15 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @subcategory.name %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @subcategory.category %>
-</p>
-
-
-<%= link_to 'Edit', edit_subcategory_path(@subcategory) %> |
-<%= link_to 'Back', subcategories_path %>
+<div id = "posts">
+  <table>
+  <%= @subcategory.posts.each do |post| %>
+    <tr>
+      <div id="title"> <%=post.title%></div>
+      <div id="author"> <%=post.user.name%></div>
+      <div id="content"> <%=post.content %><div>
+    </tr>
+    <%end%>
+  </table>
+</div>
