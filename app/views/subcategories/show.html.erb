@@ -1,13 +1,30 @@
-<p id="notice"><%= notice %></p>
 
+<!DOCTYPE "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Subcategory</title>
+<p id="notice"><%= notice %></p>
+</head>
+
+<body>
+  <div class="row">
+  <div class="span6 offset5">
 <div id = "posts">
   <table>
-  <%= @subcategory.posts.each do |post| %>
+  <% @subcategory.posts.each do |post| %>
     <tr>
-      <div id="title"> <%=post.title%></div>
-      <div id="author"> <%=post.user.name%></div>
-      <div id="content"> <%=post.content %><div>
+      <div id="title"> <h3><%=post.title%></h3></div>
+      <div id="author"> <h5><%=link_to post.user.name, user_path(post.user)%></h5></div>
+      <div id="content"> <%=post.post %><div>
+      <br/>
+      <div class="btn btn-small btn-info"> <%=link_to "Show More", user_path(post.user)%></div>
     </tr>
     <%end%>
   </table>
 </div>
+
+</div>
+</div>
+</body>
+</html>

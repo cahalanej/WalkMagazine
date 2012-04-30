@@ -15,7 +15,10 @@ class SubcategoriesController < ApplicationController
   def show
     @subcategory = Subcategory.find(params[:id])
     @posts = @subcategory.posts
-
+respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @tea_type }
+    end
   end
 
   # GET /subcategories/new

@@ -1,12 +1,31 @@
-<p id="notice"><%= notice %></p>
+</br>
+<h2> Author </h2>
+  <div><h5>Name:</h5><%= @user.name %></div>
+  <div><h5>Email:</h5><%= @user.email%></div>
+  <div><h5>Major:</h5><%= @user.major%></div>
+  <div><h5>Year:</h5><%= @user.yog%></div>
+  <br/>
+  <br/>
 
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-  <%= @user.password%>
   
-</p>
-
-
+<div class="row">
+  <div class="span6 offset5">
+<div id = "posts">
+  <h2>Recent Articles</h2>
+  <br/>
+  <table>
+  <% @user.posts.all(:order => 'id DESC', :limit=>5).each do |post| %>
+    <tr>
+      <div id="title"> <h3><%=link_to post.title, post_path(1)%></h3></div>
+      <div id="author"> <h5><%=link_to post.user.name, user_path(post.user)%></h5></div>
+      <div id="content"> <%=post.post %><div>
+        <br/>
+        <div class="btn btn-small btn-info"> <%=link_to "Show More", user_path(post.user)%></div>
+    </tr>
+    <%end%>
+  </table>
+</div>
+</div>
+</div>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
