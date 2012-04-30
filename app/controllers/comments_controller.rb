@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @post = Post.find(params[:comment][:post_id])
-    @comment = Comment.new(params[:comment])
+    @comment = @post.comments.create!(params[:comment])
     redirect_to @post
   end
 
