@@ -1,4 +1,4 @@
-1335815526
+1335895901
 AddDeviseToUsers	C:/Users/Jen/WalkMagazine/db/migrate/20120429171718_add_devise_to_users.rb	class AddDeviseToUsers 
 Application	C:/Users/Jen/WalkMagazine/config/application.rb	  class Application 
 ApplicationController	C:/Users/Jen/WalkMagazine/app/controllers/application_controller.rb	class ApplicationController 
@@ -80,8 +80,8 @@ next	C:/Users/Jen/WalkMagazine/app/assets/javascripts/bootstrap.js	function next
 removeBackdrop	C:/Users/Jen/WalkMagazine/app/assets/javascripts/bootstrap.js	function removeBackdrop()
 removeElement	C:/Users/Jen/WalkMagazine/app/assets/javascripts/bootstrap.js	function removeElement()
 removeWithAnimation	C:/Users/Jen/WalkMagazine/app/assets/javascripts/bootstrap.js	function removeWithAnimation()
-search	C:/Users/Jen/WalkMagazine/app/models/post.rb	  def self.search(search)
 search	C:/Users/Jen/WalkMagazine/app/controllers/posts_controller.rb	  def search 
+search	C:/Users/Jen/WalkMagazine/app/models/post.rb	  def self.search(search)
 show	C:/Users/Jen/WalkMagazine/app/controllers/users_controller.rb	  def show
 show	C:/Users/Jen/WalkMagazine/app/controllers/subcategories_controller.rb	  def show
 show	C:/Users/Jen/WalkMagazine/app/controllers/categories_controller.rb	  def show

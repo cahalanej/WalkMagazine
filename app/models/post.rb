@@ -1,6 +1,5 @@
 class Post < ActiveRecord::Base
   
-  attr_accessible :title, :post, :user
   def self.search(search)
     if search
      find(:all, :conditions => ['title || post LIKE ?', "%#{search}%"])

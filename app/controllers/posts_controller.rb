@@ -19,8 +19,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.search(params[:search])
-    @posts = Post.find(params[:id])
-   
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }
@@ -30,7 +29,6 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
-    @user = current_user
     @post = Post.new
 
     respond_to do |format|
@@ -48,7 +46,6 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(params[:post])
-
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
