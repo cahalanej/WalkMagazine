@@ -1,19 +1,48 @@
-<h1>Listing posts</h1>
+<div class="row">
+  <div class="offset2">
+    <% Post.all(:order => 'id DESC', :limit=>6).each do |post| %>
+    <div class="post span4" style="margin: 2px; padding: 8px;" >
+     <div class="links"> <div id="title"> <h3><%=link_to post.title, post_path(post.id)%></h3>
+      </div>
+      <div id="author"> <h5><%=link_to post.user.name, user_path(post.user)%></h5>
+      </div>
+      <div id="content"> <%=post.post.truncate(133, :omission => "... (continued)", :separator => ' ',)%>
+      </div>
+      <br/>
+      <div class="btn btn-mini btn-info"> <%=link_to "Show More", user_path(post.user)%></div>
+</div>
+
+      <br/>
+      <br/>
+
+    </div>
+    <%end%>
+
+  </div>
+
+  <div class="row">
+    <div class="span6 offset5">
+        <br/>
+        <table>
+          <%count=0%>
+          <% Post.all.each do |post| %>
+           <% if count<6%>
+            <% count = count+1%>
+           <%elsif count<16%>
+            <tr>
+              <div id="title"> <h3><%=link_to post.title, post_path(post.id)%></h3></div>
+              <div id="author"> <h5><%=link_to post.user.name, user_path(post.user)%></h5></div>
+              <div id="content"> <%=post.post.truncate(500, :omission => "... (continued)", :separator => ' ',)%></div>
+              <br/>
+              <div class="btn btn-mini btn-info"> <%=link_to "Show More", user_path(post.user)%></div>
+            </tr>
+            <br/>
+            <br/>
+            <% count = count+1%>
+          <%end%>
+         <%end%>
+      </table>
+    </div>
+  </div>
 
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.post %></td>
-    <td><%= post.subcategory %></td>
-    <td><%= post.user %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Post', new_post_path %>

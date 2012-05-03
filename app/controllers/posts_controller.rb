@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.search(params[:search])
+    @posts = Post.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -10,16 +10,13 @@ class PostsController < ApplicationController
     end
   end
   
-  def search 
-   @posts = Post.search(params[:search])
-  
-  end
-  
+
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.search(params[:search])
-    
+    @post = Post.find(params[:id])
+    @comment = @post.comments.build()
+    @comments = @post.comments
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }

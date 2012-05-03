@@ -1,8 +1,8 @@
 </br>
 <div class="span6 offset5">
-  <div id = "posts">
-    <h2> Author </h2>
-    <div><h5>Name:</h5><%= @user.name %></div>
+  <div id = "posts"style="text-align: center;">
+    <h1> <%= @user.name %></h1>
+    <div ><%=thumbnail_for @user%></div>
     <div><h5>Email:</h5><%= @user.email%></div>
     <div><h5>Major:</h5><%= @user.major%></div>
     <div><h5>Year:</h5><%= @user.yog%></div>
@@ -14,25 +14,29 @@
 <div class="row">
   <div class="span6 offset5">
     <div id = "posts">
-      <h2>Recent Articles</h2>
+      <h3 style="text-align: center;">Recent Articles</h3>
       <br/>
       <table>
         <% @user.posts.all(:order => 'id DESC', :limit=>5).each do |post| %>
         <tr>
-          <div id="title"> <h3><%=link_to post.title, post_path(1)%></h3></div>
-          <div id="author"> <h5><%=link_to post.user.name, user_path(post.user)%></h5></div>
-          <div id="content"> <%=post.post %><div>
-            <br/>
-            <div class="btn btn-small btn-info"> <%=link_to "Show More", user_path(post.user)%></div>
-            <% if current_user == post.user%>
-            <div class="btn btn-small btn-info"> <%= link_to 'Edit', edit_post_path(post) %></div>
-            <div class="btn btn-small btn-info"><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></div>
-            <%end%>
-          </tr>
+          <div id="title"> <h3><%=link_to post.title, post_path(post.id)%></h3></div>
+          <div id="author"> <h5><%=post.user.name%></h5></div>
+          <div id="content"> <%=post.post.truncate(500, :omission => "... (continued)", :separator => ' ',)%></div>
+          <br/>
+          <div id="subcategory"><%=post.subcategory.category.name %> - <%=post.subcategory.name%></div>
+          <br/>
+          <div class="btn btn-small btn-info"> <%=link_to "Show More", post_path(post.id)%></div>
+          <% if current_user == post.user%>
+          <div class="btn btn-small btn-info"> <%= link_to 'Edit', edit_post_path(post) %></div>
+          <div class="btn btn-small btn-info"><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></div>
           <%end%>
-        </table>
-      </div>
+        </tr>
+        <br/>
+        <br/>
+        <%end%>
+      </table>
     </div>
   </div>
-  <%= link_to 'Edit', edit_user_path(@user) %> |
+</div>
+
 

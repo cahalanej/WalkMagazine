@@ -9,22 +9,75 @@
 <body>
 
   <div class="row">
-    <div class="span6 offset5">
-      <% @post.each do |post| %>
-      <tr>
-        <div id="title"> <h3><%=link_to post.title, post_path(1)%></h3></div>
-        <div id="author"> <h5><%=link_to post.user.name, user_path(post.user)%></h5></div>
-        <div id="content"> <%=post.post %><div>
-          <br/>
-          <div class="btn btn-small btn-info"> <%=link_to "Show More", user_path(post.user)%></div>
-          <% if current_user == post.user%>
-          <div class="btn btn-small btn-info"> <%= link_to 'Edit', edit_post_path(post) %></div>
-          <div class="btn btn-small btn-info"><td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td></div>
-          <%end%>
-        </tr>
-        <%end%>
-      </table>
+    <div class="span10 offset2">
+      <tr >
+        <div id="title" style='text-align: center;'> <h2><%=@post.title%></h2></div>
+        <div id="author" style='text-align: center;'> <h5><%=link_to @post.user.name, user_path(@post.user)%></h5></div>
+        <br/>
 
+        <div id="content"> <%=@post.post %></div>
+
+
+        <% if current_user == @post.user%>
+        <div class="btn btn-small btn-info"> <%= link_to 'Edit', edit_post_path(@post) %></div>
+        <div class="btn btn-small btn-info"><td><%= link_to 'Destroy', @post, confirm: 'Are you sure?', method: :delete %></td></div>
+        <%end%>
+      </tr>
+    </table>
+
+  </div>
 </div>
+
+<br/>
+<br/>
+<br/>
+<div class="row">
+  <div class="span6 offset4">
+    <table>
+      <% @post.comments.each do |post| %>
+      <h4><%= post.title %></h4>
+
+      <div><%= post.cmt %></div>
+    </br>
+    <% end %>
+  </table>
+</div>
+</div>
+<br/>
+<br/>
+<br/>
+       <div class="row">
+    <div class="span6 offset5">
+      <%= form_for(@comment) do |f| %>
+      <% if @comment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+        <ul>
+          <% @comment.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :title %><br />
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :cmt %><br />
+        <%= f.text_area :cmt %>
+      </div>
+      <div class="field">
+        <%= f.hidden_field :post_id, :value => @post.id %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
 </body>
 </html>

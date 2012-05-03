@@ -20,6 +20,7 @@
 #navbar li {
   float: left;
   margin-right: 5px;
+  
 }
 /* Turns the links into larger clickable boxes */
 #navbar li a {
@@ -39,6 +40,7 @@
   display: none;
   position: absolute;
   padding: 0;
+  z-index:3;
 }
 /* Shows nested hierarchy links when we mouseover the parent */
 #navbar li:hover ul {

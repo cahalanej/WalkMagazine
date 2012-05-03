@@ -1,4 +1,4 @@
-1335895901
+1336024567
 AddDeviseToUsers	C:/Users/Jen/WalkMagazine/db/migrate/20120429171718_add_devise_to_users.rb	class AddDeviseToUsers 
 Application	C:/Users/Jen/WalkMagazine/config/application.rb	  class Application 
 ApplicationController	C:/Users/Jen/WalkMagazine/app/controllers/application_controller.rb	class ApplicationController 
@@ -21,6 +21,10 @@ CreateComments	C:/Users/Jen/WalkMagazine/db/migrate/20120429032924_create_commen
 CreatePosts	C:/Users/Jen/WalkMagazine/db/migrate/20120429032703_create_posts.rb	class CreatePosts 
 CreateSubcategories	C:/Users/Jen/WalkMagazine/db/migrate/20120429032043_create_subcategories.rb	class CreateSubcategories 
 CreateUsers	C:/Users/Jen/WalkMagazine/db/migrate/20120429032120_create_users.rb	class CreateUsers 
+HomeController	C:/Users/Jen/WalkMagazine/app/controllers/home_controller.rb	class HomeController 
+HomeControllerTest	C:/Users/Jen/WalkMagazine/test/functional/home_controller_test.rb	class HomeControllerTest 
+HomeHelper	C:/Users/Jen/WalkMagazine/app/helpers/home_helper.rb	module HomeHelper
+HomeHelperTest	C:/Users/Jen/WalkMagazine/test/unit/helpers/home_helper_test.rb	class HomeHelperTest 
 Post	C:/Users/Jen/WalkMagazine/app/models/post.rb	class Post 
 PostTest	C:/Users/Jen/WalkMagazine/test/unit/post_test.rb	class PostTest 
 PostsController	C:/Users/Jen/WalkMagazine/app/controllers/posts_controller.rb	class PostsController 
@@ -71,6 +75,7 @@ hideWithTransition	C:/Users/Jen/WalkMagazine/app/assets/javascripts/bootstrap.js
 index	C:/Users/Jen/WalkMagazine/app/controllers/users_controller.rb	  def index
 index	C:/Users/Jen/WalkMagazine/app/controllers/subcategories_controller.rb	  def index
 index	C:/Users/Jen/WalkMagazine/app/controllers/categories_controller.rb	  def index
+index	C:/Users/Jen/WalkMagazine/app/controllers/home_controller.rb	  def index
 index	C:/Users/Jen/WalkMagazine/app/controllers/posts_controller.rb	  def index
 new	C:/Users/Jen/WalkMagazine/app/controllers/users_controller.rb	  def new
 new	C:/Users/Jen/WalkMagazine/app/controllers/subcategories_controller.rb	  def new
@@ -80,13 +85,12 @@ next	C:/Users/Jen/WalkMagazine/app/assets/javascripts/bootstrap.js	function next
 removeBackdrop	C:/Users/Jen/WalkMagazine/app/assets/javascripts/bootstrap.js	function removeBackdrop()
 removeElement	C:/Users/Jen/WalkMagazine/app/assets/javascripts/bootstrap.js	function removeElement()
 removeWithAnimation	C:/Users/Jen/WalkMagazine/app/assets/javascripts/bootstrap.js	function removeWithAnimation()
-search	C:/Users/Jen/WalkMagazine/app/controllers/posts_controller.rb	  def search 
-search	C:/Users/Jen/WalkMagazine/app/models/post.rb	  def self.search(search)
 show	C:/Users/Jen/WalkMagazine/app/controllers/users_controller.rb	  def show
 show	C:/Users/Jen/WalkMagazine/app/controllers/subcategories_controller.rb	  def show
 show	C:/Users/Jen/WalkMagazine/app/controllers/categories_controller.rb	  def show
 show	C:/Users/Jen/WalkMagazine/app/controllers/posts_controller.rb	  def show
 test_homepage	C:/Users/Jen/WalkMagazine/test/performance/browsing_test.rb	  def test_homepage
+thumbnail_for	C:/Users/Jen/WalkMagazine/app/helpers/users_helper.rb	    def thumbnail_for(user, options = {size: 75})
 up	C:/Users/Jen/WalkMagazine/db/migrate/20120429171718_add_devise_to_users.rb	  def self.up
 update	C:/Users/Jen/WalkMagazine/app/controllers/users_controller.rb	  def update
 update	C:/Users/Jen/WalkMagazine/app/controllers/subcategories_controller.rb	  def update
