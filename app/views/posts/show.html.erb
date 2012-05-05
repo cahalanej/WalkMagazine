@@ -33,6 +33,7 @@
 <br/>
 <div class="row">
   <div class="span6 offset4">
+    <h3>Comments</h3>
     <table>
       <% @post.comments.each do |post| %>
       <h4><%= post.title %></h4>
@@ -46,8 +47,9 @@
 <br/>
 <br/>
 <br/>
-       <div class="row">
+    <div class="row">
     <div class="span6 offset5">
+     
       <%= form_for(@comment) do |f| %>
       <% if @comment.errors.any? %>
       <div id="error_explanation">
@@ -62,12 +64,10 @@
       <% end %>
 
       <div class="field">
-        <%= f.label :title %><br />
-        <%= f.text_field :title %>
+        <%= f.text_field :title, placeholder: "title" %>
       </div>
-      <div class="field">
-        <%= f.label :cmt %><br />
-        <%= f.text_area :cmt %>
+      <div class="field"><br/>
+        <%= f.text_area :cmt, placeholder: "thoughts? opinions? write your comments here!" %>
       </div>
       <div class="field">
         <%= f.hidden_field :post_id, :value => @post.id %>

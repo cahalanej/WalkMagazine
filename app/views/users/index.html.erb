@@ -1,29 +1,24 @@
-<h1>Listing users</h1>
 
-<table>
-  <tr>
-    <th>Email</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.email %></td>
-    <td><%= user.password %> </td>
-    <td><%= user.name %> </td>
-    <td><%= user.major %> </td>
-    <td><%= user.yog %> </td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div class="row">
+  <div class="span7 offset2">
 
-<br />
+    <h2>Search Results : Users</h2>
+    <br/>
+    <br/>
+    <div class="offset1">
+      <%@users.each do |user| %>
+      <div>
+        <div><h3><%= link_to user.name, user_path(user.id) %></h3></div>
+        <div><%=user.email%></div>
+        <div><%= user.major %></div>
+        <div><%= user.yog %> </div>
 
-<%= link_to 'Sign up', new_user_session_path %>
-<%= link_to 'Sign in', user_session_path %>
-<%= link_to 'Signout', destroy_user_session_path, method: :delete %>
+      </div>
+
+      <br/>
+      <br/>
+      <% end %>
+    </div>
+  </div>
+</div>

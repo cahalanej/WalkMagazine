@@ -6,6 +6,9 @@
     <div><h5>Email:</h5><%= @user.email%></div>
     <div><h5>Major:</h5><%= @user.major%></div>
     <div><h5>Year:</h5><%= @user.yog%></div>
+<% if current_user == @user%>
+ <div class="btn btn-small btn-info"><%= link_to 'Destroy', @user, confirm: 'Are you sure?', method: :delete %></div>
+<%end%>
     <br/>
     <br/>
   </div>
@@ -19,16 +22,16 @@
       <table>
         <% @user.posts.all(:order => 'id DESC', :limit=>5).each do |post| %>
         <tr>
-          <div id="title"> <h3><%=link_to post.title, post_path(post.id)%></h3></div>
+          <div id="title"> <h3><%=post.title%></h3></div>
           <div id="author"> <h5><%=post.user.name%></h5></div>
           <div id="content"> <%=post.post.truncate(500, :omission => "... (continued)", :separator => ' ',)%></div>
           <br/>
           <div id="subcategory"><%=post.subcategory.category.name %> - <%=post.subcategory.name%></div>
           <br/>
-          <div class="btn btn-small btn-info"> <%=link_to "Show More", post_path(post.id)%></div>
+          <div class="btn btn-mini btn-info"> <%=link_to "Show More", post_path(post.id)%></div>
           <% if current_user == post.user%>
-          <div class="btn btn-small btn-info"> <%= link_to 'Edit', edit_post_path(post) %></div>
-          <div class="btn btn-small btn-info"><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></div>
+          <div class="btn btn-mini btn-info"> <%= link_to 'Edit', edit_post_path(post) %></div>
+          <div class="btn btn-mini btn-info"><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></div>
           <%end%>
         </tr>
         <br/>

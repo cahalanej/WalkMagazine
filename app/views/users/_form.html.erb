@@ -1,37 +1,37 @@
 <div class="row">
   <div class="span6 offset5">
-  <%= form_for(@user) do |f| %>
+    <%= form_for(@user) do |f| %>
     <h1>Edit user</h1>
     <br/>
-  <% if @user.errors.any? %>
+    <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
-      <% @user.errors.full_messages.each do |msg| %>
+        <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
 
-  <div class="field">
-    <%= f.text_field :name, :placeholder=>"name" %>
-  </div>
-  <div class="field">
-    <%= f.text_field :email, :placeholder=>"email" %>
-  </div>
-  <div class="field">
-    <%= f.text_field :major, :placeholder=>"major" %>
-  </div>
-  <div class="field">
-    <%= f.label :Year_of_Graduation %><br />
-    <%= f.number_field :yog%>
-  </div>
+    <div class="field">
+      <%= f.text_field :name, :placeholder=>"name" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :email, :placeholder=>"email" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :major, :placeholder=>"major" %>
+    </div>
+    <div class="field">
+      <%= f.label :Year_of_Graduation %><br />
+      <%= f.number_field :yog%>
+    </div>
 
-  <div class="actions">
-    <%= f.submit %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+    <% end %>
   </div>
-<% end %>
-</div>
 </div>

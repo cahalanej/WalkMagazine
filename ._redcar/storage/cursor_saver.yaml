@@ -9,13 +9,83 @@ cursor_positions:
   - :path: app/controllers/registrations_controller.rb
     :cursor_offset: 0
     :timestamp: 2012-04-29 21:30:59.149000 -04:00
-  - :path: app/views/layouts/application.html.erb
-    :cursor_offset: 1101
-    :timestamp: 2012-04-30 02:26:41.466000 -04:00
   - :path: config/environments/development.rb
     :cursor_offset: 1365
     :timestamp: 2012-04-29 22:04:10.590000 -04:00
   - :path: app/views/devise/mailer/confirmation_instructions.html.erb
     :cursor_offset: 0
     :timestamp: 2012-04-30 11:14:24.574000 -04:00
+  - :path: app/assets/stylesheets/home.css.scss
+    :cursor_offset: 175
+    :timestamp: 2012-05-02 12:19:45.731000 -04:00
+  - :path: app/views/home/index.html.erb
+    :cursor_offset: 75
+    :timestamp: 2012-05-02 12:07:55.352000 -04:00
+  - :path: db/test.sqlite3
+    :cursor_offset: 0
+    :timestamp: 2012-05-04 21:49:05.226000 -04:00
+  - :path: app/views/users/index.html.erb
+    :cursor_offset: 441
+    :timestamp: 2012-05-04 23:00:04.015000 -04:00
+  - :path: app/views/devise/sessions/new.html.erb
+    :cursor_offset: 606
+    :timestamp: 2012-05-04 23:01:06.438000 -04:00
+  - :path: db/schema.rb
+    :cursor_offset: 1357
+    :timestamp: 2012-04-30 11:59:07.930000 -04:00
+    :selection_offset: 1398
+    :block_selection_mode: false
+  - :path: test/unit/post_test.rb
+    :cursor_offset: 277
+    :timestamp: 2012-05-04 23:01:19.918000 -04:00
+  - :path: app/views/posts/_form.html.erb
+    :cursor_offset: 908
+    :timestamp: 2012-05-04 23:01:36.126000 -04:00
+  - :path: app/helpers/posts_helper.rb
+    :cursor_offset: 0
+    :timestamp: 2012-04-30 11:57:02.132000 -04:00
+  - :path: app/views/posts/new.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-04-30 11:57:02.257000 -04:00
+  - :path: app/views/posts/search.html.erb
+    :cursor_offset: 15
+    :timestamp: 2012-05-03 00:53:49.642000 -04:00
+  - :path: app/views/posts/indiv.html.erb
+    :cursor_offset: 391
+    :timestamp: 2012-05-02 13:32:19.533000 -04:00
+  - :path: app/assets/stylesheets/application.css
+    :cursor_offset: 891
+    :timestamp: 2012-05-04 23:02:16.358000 -04:00
+  - :path: app/views/users/_form.html.erb
+    :cursor_offset: 0
+    :timestamp: 2012-05-04 23:02:41.814000 -04:00
+  - :path: app/assets/stylesheets/posts.css.scss
+    :cursor_offset: 278
+    :timestamp: 2012-05-04 23:02:49.053000 -04:00
+  - :path: app/views/posts/index.html.erb
+    :cursor_offset: 756
+    :timestamp: 2012-05-04 23:04:22.451000 -04:00
+  - :path: app/views/users/show.html.erb
+    :cursor_offset: 1580
+    :timestamp: 2012-05-04 23:05:41.876000 -04:00
+  - :path: app/models/subcategory.rb
+    :cursor_offset: 0
+    :timestamp: 2012-04-30 11:57:02.153000 -04:00
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 523
+    :timestamp: 2012-05-04 23:14:16.185000 -04:00
+  - :path: app/controllers/users_controller.rb
+    :cursor_offset: 114
+    :timestamp: 2012-05-04 23:14:41.057000 -04:00
+  - :path: app/controllers/posts_controller.rb
+    :cursor_offset: 111
+    :timestamp: 2012-05-03 01:33:26.032000 -04:00
+    :selection_offset: 114
+    :block_selection_mode: false
+  - :path: config/routes.rb
+    :cursor_offset: 189
+    :timestamp: 2012-05-04 22:48:00.930000 -04:00
+  - :path: app/views/posts/show.html.erb
+    :cursor_offset: 1261
+    :timestamp: 2012-05-04 23:15:22.568000 -04:00
 files_to_retain: 0
