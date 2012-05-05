@@ -25,7 +25,7 @@
     <br/>
     <table>
       <%count=0%>
-      <% Post.all.each do |post| %>
+      <% Post.all(offset: 6, :order => 'id DESC').each do |post| %>
       <% if count<6%>
       <% count = count+1%>
       <%elsif count<16%>

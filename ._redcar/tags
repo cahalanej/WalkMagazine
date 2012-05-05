@@ -1,4 +1,4 @@
-1336188985
+1336189351
 AddDeviseToUsers	C:/Users/Jen/WalkMagazine/db/migrate/20120429171718_add_devise_to_users.rb	class AddDeviseToUsers 
 Application	C:/Users/Jen/WalkMagazine/config/application.rb	  class Application 
 ApplicationController	C:/Users/Jen/WalkMagazine/app/controllers/application_controller.rb	class ApplicationController 
